@@ -228,7 +228,7 @@ python federatedscope/main.py --cfg scripts/distributed_scripts/distributed_conf
 python federatedscope/main.py --cfg scripts/distributed_scripts/distributed_configs/distributed_client_3.yaml data.file_path 'PATH/TO/DATA' distribute.server_host x.x.x.x distribute.server_port xxxx distribute.client_host x.x.x.x distribute.client_port xxxx
 ```
 
-An executable example with generated toy data can be run with (a script can be found in `scripts/run_distributed_lr.sh`):
+An executable example with generated toy data can be run with (a script can be found in `scripts/distributed_scripts/run_distributed_lr.sh`):
 ```bash
 # Generate the toy data
 python scripts/distributed_scripts/gen_data.py
