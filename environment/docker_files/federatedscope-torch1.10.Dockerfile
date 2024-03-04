@@ -15,7 +15,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # install basic tools
 RUN apt-get -y update \
-    && apt-get -y install curl git gcc g++ make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev python-dev libmysqlclient-dev
+    && apt-get -y install vim curl git gcc g++ make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev python-dev libmysqlclient-dev
 
 # install miniconda,  in batch (silent) mode, does not edit PATH or .bashrc or .bash_profile
 RUN apt-get update -y \
