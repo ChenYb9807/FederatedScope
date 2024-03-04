@@ -81,7 +81,9 @@ First of all, users need to clone the source code and install the required packa
 git clone https://github.com/alibaba/FederatedScope.git
 cd FederatedScope
 ```
-#### Use Docker
+#### Docker
+
+需要安装nvidia驱动和nvidia-container-tooklit
 
 You can build docker image and run with docker env (cuda 11 and torch 1.10):
 
@@ -100,11 +102,12 @@ environment/docker_files/federatedscope-torch1.10-application.Dockerfile
 Note: You can choose to use cuda 10 and torch 1.8 via changing `torch1.10` to `torch1.8`.
 The docker images are based on the nvidia-docker. Please pre-install the NVIDIA drivers and `nvidia-docker2` in the host machine. See more details [here](https://github.com/alibaba/FederatedScope/tree/master/environment/docker_files).
 
-#### Use Conda
+#### Conda
 
 We recommend using a new virtual environment to install FederatedScope:
 
 ```bash
+source activate
 conda create -n fs python=3.9
 conda activate fs
 ```
@@ -128,7 +131,7 @@ Finally, after the backend is installed, you can install FederatedScope from `so
 
 ```bash
 # Editable mode
-pip install -e .
+pip install .
 
 # Or (developers for dev mode)
 pip install -e .[dev]
