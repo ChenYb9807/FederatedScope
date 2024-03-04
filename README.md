@@ -89,8 +89,10 @@ You can build docker image and run with docker env (cuda 11 and torch 1.10):
 
 ```
 docker build -f environment/docker_files/federatedscope-torch1.10.Dockerfile -t alibaba/federatedscope:base-env-torch1.10 .
-docker run --gpus device=all --rm -it --name "fedscope" -w $(pwd) alibaba/federatedscope:base-env-torch1.10 /bin/bash
+docker run --gpus device=all --rm -it --name "fedscope" -v /root/FederatedScope:/root/FederatedScope -w $(pwd) alibaba/federatedscope:base-env-torch1.10 /bin/bash
 ```
+如果没有nvidia显卡和驱动，去掉--gpus device=all
+
 If you need to run with down-stream tasks such as graph FL, change the requirement/docker file name into another one when executing the above commands:
 ```
 # environment/requirements-torch1.10.txt -> 
