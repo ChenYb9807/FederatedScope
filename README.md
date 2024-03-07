@@ -133,7 +133,7 @@ Finally, after the backend is installed, you can install FederatedScope from `so
 
 ```bash
 # Editable mode
-pip install .
+pip install -e .
 
 # Or (developers for dev mode)
 pip install -e .[dev]
